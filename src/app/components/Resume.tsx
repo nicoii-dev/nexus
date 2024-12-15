@@ -5,11 +5,13 @@ import { Button } from "rizzui";
 import Link from "next/link";
 import { FaUserGraduate, FaBriefcase } from "react-icons/fa";
 
+import "./resume-css.css";
+
 export default function Resume() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <div className="px-5 mt-14 md:flex-row sm:flex-row flex-col items-center bg-white shadow-2xl rounded-md p-10 pr-10 pl-10">
+    <div id="resume" className="px-5 mt-14 md:flex-row sm:flex-row flex-col items-center bg-white shadow-2xl rounded-md p-10 pr-10 pl-10">
       <div className="flex flex-col w-full">
         <div className="flex flex-col justify-center sm:justify-between md:flex-row">
           <div>
@@ -35,7 +37,7 @@ export default function Resume() {
                     @ Cagayan de Oro College, Cagayan de Oro City, Philippines
                   </p>
                   <div className="inline-block text-gray-600 text-md font-bold tracking-widest ">
-                    S.Y 2014 - 2019
+                    2014 - 2019
                   </div>
                 </div>
               </div>
@@ -75,7 +77,9 @@ export default function Resume() {
         </div>
       </div>
       <div className="flex justify-center w-full mt-10">
-        <Button variant="outline" className="bg-black text-[20px] p-2 pl-5 pr-5 animate-bounce" size="md">Download CV</Button>
+        <Button variant="outline" className="buttonDownload" size="md">
+          Download CV
+        </Button>
       </div>
     </div>
   );

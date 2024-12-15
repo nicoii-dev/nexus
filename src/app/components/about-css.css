@@ -1,0 +1,93 @@
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all libraries and frameworks containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  border-radius: 10;
+}
+/* react*/
+.containerOne:hover {
+  background-color: #087ea4;
+  transition-duration: 0.3s;
+}
+/* next*/
+.containerTwo:hover {
+  background-color: #555;
+  transition-duration: 0.3s;
+}
+/* tailwind*/
+.containerThree:hover {
+  background-color: #06b6d4;
+  transition-duration: 0.3s;
+}
+/* laravel*/
+.containerFour:hover {
+  background-color: #f05340;
+  transition-duration: 0.3s;
+}
+/* node*/
+.containerFive:hover {
+  background-color: #44883e;
+  transition-duration: 0.3s;
+}
+/* git*/
+.containerSix:hover {
+  background-color: #f14e32;
+  transition-duration: 0.3s;
+}
+/* github*/
+.containerSeven:hover {
+  background-color: #2b3137;
+  transition-duration: 0.3s;
+}
+/* gitlab*/
+.containerEight:hover {
+  background-color: #fc6d27;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 25px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
