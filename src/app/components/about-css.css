@@ -62,6 +62,11 @@
   background-color: #fc6d27;
   transition-duration: 0.3s;
 }
+/* react-native-paper*/
+.containerNine:hover {
+  background-color: #6200ee;
+  transition-duration: 0.3s;
+}
 
 .socialContainer:active {
   transform: scale(0.9);
