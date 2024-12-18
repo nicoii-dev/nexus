@@ -99,7 +99,7 @@ const ReviewCard = ({
             </h1>
             <h1 className="text-black text-center font-mono">Mobile App</h1>
             <div>
-              <h1 className="text-black p-5 text-ellipsis max-h-[300px] h-[300px] bg-slate-200 overflow-scroll overflow-x-clip">{body}</h1>
+              <h1 className="text-black p-5 text-ellipsis max-h-[300px] h-[300px] overflow-scroll overflow-x-clip">{body}</h1>
             </div>
           </div>
           {type === "image" ? (
