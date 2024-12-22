@@ -1,4 +1,3 @@
-import { Tooltip } from "rizzui";
 import About from "./About";
 import Resume from "./Resume";
 import Projects from "./Projects";
