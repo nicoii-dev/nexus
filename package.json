@@ -17,8 +17,8 @@
     "flowbite-react": "^0.10.2",
     "lucide-react": "^0.468.0",
     "next": "15.0.3",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
     "rizzui": "^0.8.7",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
@@ -34,5 +34,11 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "typescript": "^5"
+  },
+  "overrides": {
+  "@mui/material": {
+    "react": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-69d4b800-20241021"
   }
+}
 }
