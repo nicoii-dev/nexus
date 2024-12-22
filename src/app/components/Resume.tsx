@@ -77,9 +77,11 @@ export default function Resume() {
         </div>
       </div>
       <div className="flex justify-center w-full mt-10">
-        <Button variant="outline" className="buttonDownload" size="md">
-          Download CV
-        </Button>
+        <a href="/ARJOHN_ELY_RESUME.docx" download>
+          <Button variant="outline" className="buttonDownload" size="md">
+            Download CV
+          </Button>
+        </a>
       </div>
     </div>
   );
