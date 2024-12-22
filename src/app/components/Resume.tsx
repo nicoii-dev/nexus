@@ -1,14 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { Button } from "rizzui";
-import Link from "next/link";
 import { FaUserGraduate, FaBriefcase } from "react-icons/fa";
 
 import "./resume-css.css";
 
 export default function Resume() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <div id="resume" className="px-5 mt-14 md:flex-row sm:flex-row flex-col items-center bg-white shadow-2xl rounded-md p-10 pr-10 pl-10">

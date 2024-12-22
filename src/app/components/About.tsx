@@ -1,14 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState } from "react";
-import { Button } from "rizzui";
 import Link from "next/link";
 import { Tooltip } from "rizzui";
 import "./about-css.css";
 
 export default function About() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <div

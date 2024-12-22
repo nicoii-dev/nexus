@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Marquee from "@/components/ui/marquee";
@@ -119,11 +120,13 @@ const ReviewCard = ({
               </button>
             </Link>
           </div> :
-            <img
+            <Image
               src={link}
               alt={`${name} GIF`}
+              width={400}
+              height={450}
               className="flex justify-center h-[450px] w-[400px] p-5 rounded-md"
-            ></img>
+            />
           }
         </div>
       </div>
