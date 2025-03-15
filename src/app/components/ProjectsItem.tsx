@@ -3,14 +3,15 @@ import clsx from "clsx";
 import Link from "next/link";
 import { Tooltip } from "rizzui";
 
+interface GithubInterface {
+  frontend: string;
+  backend: string;
+}
 export interface ItemInterface {
   name: string;
   description: string;
   image: string;
-  github: {
-    frontend: string;
-    backend: string;
-  };
+  github: GithubInterface;
   madeWith: string[];
 }
 interface ProjectInterface {
@@ -46,9 +47,9 @@ export const ProjectItem = ({ item }: ProjectInterface) => {
             </h1>
           </div>
           <div className="flex justify-end gap-2 p-2">
-            {Object.keys(item?.github).map((key: string) => (
+            {Object.keys(item?.github).map((key) => (
               <div
-                className={clsx("flex bg-gray-700 p-2 h-5/6 w-fit rounded-md items-center cursor-pointer", item.github[key].length < 1 ? "invisible" : "visible" )}
+                className={clsx("flex bg-gray-700 p-2 h-5/6 w-fit rounded-md items-center cursor-pointer", item.github[key as keyof GithubInterface].length < 1 ? "invisible" : "visible" )}
                 key={key}
               >
                 <Tooltip
@@ -57,7 +58,7 @@ export const ProjectItem = ({ item }: ProjectInterface) => {
                   placement="bottom-start"
                   showArrow={false}
                 >
-                  <Link href={item.github[key]} target="_blank">
+                  <Link href={item.github[key as keyof GithubInterface ]} target="_blank">
                     {Icon("github")}
                   </Link>
                 </Tooltip>
