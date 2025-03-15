@@ -8,7 +8,7 @@ import "./resume-css.css";
 export default function Resume() {
 
   return (
-    <div id="resume" className="px-5 mt-14 md:flex-row sm:flex-row flex-col items-center bg-white shadow-2xl rounded-md p-10 pr-10 pl-10">
+    <section id="resume" className="px-5 mt-14 md:flex-row sm:flex-row flex-col items-center bg-white shadow-2xl rounded-md p-10 pr-10 pl-10">
       <div className="flex flex-col w-full">
         <div className="flex flex-col justify-center sm:justify-between md:flex-row">
           <div>
@@ -53,7 +53,7 @@ export default function Resume() {
                   </h3>
                   <p className="text-gray-500">Software Engineer</p>
                   <div className="inline-block text-gray-600 text-md font-bold tracking-widest ">
-                    Sep 2021 - Present
+                    Sep 2021 - Feb 2025
                   </div>
                 </div>
               </div>
@@ -74,12 +74,12 @@ export default function Resume() {
         </div>
       </div>
       <div className="flex justify-center w-full mt-10">
-        <a href="/ARJOHN_ELY_RESUME.docx" download>
+        <a href="/ARJOHN_ELY_CV.pdf" download>
           <Button variant="outline" className="buttonDownload" size="md">
             Download CV
           </Button>
         </a>
       </div>
-    </div>
+    </section>
   );
 }

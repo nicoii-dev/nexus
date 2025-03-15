@@ -67,6 +67,11 @@
   background-color: #6200ee;
   transition-duration: 0.3s;
 }
+/* laravel*/
+.containerTen:hover {
+  background-color: #e10098;
+  transition-duration: 0.3s;
+}
 
 .socialContainer:active {
   transform: scale(0.9);
