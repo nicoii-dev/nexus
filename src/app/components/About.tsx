@@ -76,7 +76,7 @@ export default function About() {
             <Link
               href={"https://react.dev/"}
               target="_blank"
-              className="socialContainer containerOne"
+              className="rounded-md socialContainer containerOne"
             >
               {Icon("react")}
             </Link>
@@ -90,7 +90,7 @@ export default function About() {
             <Link
               href={"https://nextjs.org/"}
               target="_blank"
-              className="socialContainer containerTwo"
+              className="rounded-md socialContainer containerTwo"
             >
                  {Icon("next")}
             </Link>
@@ -104,7 +104,7 @@ export default function About() {
             <Link
               href={"https://www.typescriptlang.org/"}
               target="_blank"
-              className="socialContainer containerOne"
+              className="rounded-md socialContainer containerOne"
             >
               {Icon("typescript")}
             </Link>
@@ -118,7 +118,7 @@ export default function About() {
             <Link
               href={"https://graphql.org/"}
               target="_blank"
-              className="socialContainer containerTen"
+              className="rounded-md socialContainer containerTen"
             >
              {Icon("graphql")}
             </Link>
@@ -132,7 +132,7 @@ export default function About() {
             <Link
               href={"https://tailwindcss.com/"}
               target="_blank"
-              className="socialContainer containerThree"
+              className="rounded-md socialContainer containerThree"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -154,7 +154,7 @@ export default function About() {
             <Link
               href={"https://laravel.com/"}
               target="_blank"
-              className="socialContainer containerFour"
+              className="rounded-md socialContainer containerFour"
             >
               {Icon("laravel")}
             </Link>
@@ -168,7 +168,7 @@ export default function About() {
             <Link
               href={"https://nodejs.org/"}
               target="_blank"
-              className="socialContainer containerFive"
+              className="rounded-md socialContainer containerFive"
             >
               {Icon("node")}
             </Link>
@@ -182,7 +182,7 @@ export default function About() {
             <Link
               href={"https://git-scm.com/"}
               target="_blank"
-              className="socialContainer containerSix"
+              className="rounded-md socialContainer containerSix"
             >
               {Icon("git")}
             </Link>
@@ -196,7 +196,7 @@ export default function About() {
             <Link
               href={"https://github.com/"}
               target="_blank"
-              className="socialContainer containerSeven"
+              className="rounded-md socialContainer containerSeven"
             >
               {Icon("github")}
             </Link>
@@ -210,7 +210,7 @@ export default function About() {
             <Link
               href={"https://about.gitlab.com/"}
               target="_blank"
-              className="socialContainer containerEight"
+              className="rounded-md socialContainer containerEight"
             >
               {Icon("gitlab")}
             </Link>

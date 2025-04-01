@@ -14,6 +14,8 @@ export default function Projects() {
         backend: "",
       },
       madeWith: ["react", "graphql", "typescript"],
+      type: "mobile",
+      link: "https://drive.google.com/file/d/1MgS2QLqd7TVgU-SZLs5lLBBjuaLxMl6n/view?usp=sharing",
     },
     {
       name: "News Network",
@@ -25,17 +27,21 @@ export default function Projects() {
         backend: "",
       },
       madeWith: ["react", "typescript", "laravel"],
+      type: "web",
+      link: "https://seodirectservice.com/",
     },
     {
       name: "JoltPay",
       description:
-        "Jolt Pay is a game-changing point of sale (POS) software, designed to simplify taking orders and payments for mobile food and goods services. As a progressive point of sales software, Jolt Pay redefines the ordering and purchasing experience, enhancing your customer engagement and driving your business growth. With the power of pre-ordering, location services, loyalty programs, push notifications, and detailed analytics, you gain the tools to forecast and scale your business growth effectively.",
+        "Jolt Pay is a game-changing point of sale (POS) software, designed to simplify taking orders and payments for web food and goods services. As a progressive point of sales software, Jolt Pay redefines the ordering and purchasing experience, enhancing your customer engagement and driving your business growth. With the power of pre-ordering, location services, loyalty programs, push notifications, and detailed analytics, you gain the tools to forecast and scale your business growth effectively.",
       image: "/img/joltpay.png",
       github: {
         frontend: "https://github.com/nicoii-dev/joltpay",
         backend: "",
       },
       madeWith: ["react", "next", "graphql", "typescript"],
+      type: "web",
+      link: "https://joltpay.com.au/",
     },
     {
       name: "Alumni App (thesis project)",
@@ -47,6 +53,21 @@ export default function Projects() {
         backend: "https://github.com/nicoii-dev/ustp_alumni_laravel_api",
       },
       madeWith: ["react", "laravel"],
+      type: "web",
+      link: "https://ustp-alumni-react-web.vercel.app//",
+    },
+    {
+      name: "Oasis Dental Call Center",
+      description:
+        "The Oasis Dental Call Center is currently in its inception phase, having been conceived through the collaboration of the Gabucan brothers. Its primary goal is to elevate the overall patient experience within the realm of dental practice, laying the groundwork for synergistic and innovative solutions. The first step taken in this direction was streamlining the initial phase of a patient’s visit by providing relevant, real-time insurance benefits information, thus enabling an informed and collaborative approach toward achieving the patients’ goals. As this concept has continued to evolve, it has taken on a broader scope, promoting the fullest potential of dental practice and constantly reinventing itself to achieve this goal.",
+      image: "/img/oasis.png",
+      github: {
+        frontend: "https://github.com/nicoii-dev/oasisdentalcallcenter",
+        backend: "",
+      },
+      madeWith: ["react", "graphql"],
+      type: "web",
+      link: "https://oasisdentalcallcenter.vercel.app/",
     },
     {
       name: "Responsive Table",
@@ -58,6 +79,8 @@ export default function Projects() {
         backend: "",
       },
       madeWith: ["react", "graphql", "typescript"],
+      type: "web",
+      link: "https://responsive-table-ten.vercel.app/",
     },
   ];
 
