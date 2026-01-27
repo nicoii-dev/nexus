@@ -61,11 +61,11 @@ export default function Resume() {
                 <div className="border-t-2 w-[2vw] border-gray-900 border-dashed"></div>
                 <div className="justify-start border-gray-900 p-2 border-dashed border-2 rounded-md w-full">
                   <h3 className="text-lg font-semibold text-gray-800">
-                    Nibble Dev Team
+                    Freelance
                   </h3>
                   <p className="text-gray-500">Fullstack Developer</p>
                   <div className="inline-block text-gray-600 text-md font-bold tracking-widest ">
-                    May 2022 - Dec 2023
+                    March 2025 - Present
                   </div>
                 </div>
               </div>
