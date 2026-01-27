@@ -35,7 +35,7 @@ export default function About() {
             <div className="flex gap-5">
               <div className="flex text-gray-800 justify-center font-mono">
                 <div className="">
-                  <p className="text-[50px]">3</p>
+                  <p className="text-[50px]">4</p>
                 </div>
                 <div className="text-gray-800 content-center">
                   <p>+</p>
