@@ -74,7 +74,7 @@ export default function Resume() {
         </div>
       </div>
       <div className="flex justify-center w-full mt-10">
-        <a href="/ARJOHN_ELY_CV.pdf" download>
+        <a href="/Arjohn_Ely.pdf" download>
           <Button variant="outline" className="buttonDownload" size="md">
             Download CV
           </Button>
