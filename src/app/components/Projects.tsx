@@ -5,6 +5,19 @@ import { ItemInterface, ProjectItem } from "./ProjectsItem";
 export default function Projects() {
   const projects: ItemInterface[] = [
     {
+      name: "PhALGA Mobile",
+      description:
+        "Phalga is a modern mobile platform designed to connect, inform, and engage communities and organizations. It provides a centralized space where users can explore upcoming events, access important documents, and participate in interactive discussions — all in one convenient app.",
+      image: "/img/phalgamobile.png",
+      github: {
+        frontend: "",
+        backend: "",
+      },
+      madeWith: ["react", "typescript", "laravel"],
+      type: "mobile",
+      link: "https://apps.apple.com/ph/app/phalga-mobile/id6754968119",
+    },
+    {
       name: "Sparc Mobile",
       description:
         "Effortless rent payments within your apartment building. All maintenance requests are just one click away. Sparc integrates resident events, fitness classes, and community conversations. Whether it's dog walking, massage therapy, or any other custom service, Sparc makes it easy to book and enjoy personalized care, tailored to your lifestyle-all from the convenience of your phone.",
