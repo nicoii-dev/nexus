@@ -129,7 +129,7 @@ export default function Resume() {
 
         <div className="flex justify-center mt-10">
           <a
-            href="/Arjohn_Ely.pdf"
+            href="/ARJOHN_ELY_RESUME.pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-all glow group"
           >

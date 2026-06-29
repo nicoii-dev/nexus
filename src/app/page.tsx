@@ -57,7 +57,7 @@ export default function Home() {
               <GoArrowUpRight className="w-4 h-4" />
             </a>
             <a
-              href="/Arjohn_Ely.pdf"
+              href="/ARJOHN_ELY_RESUME.pdf"
               download
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass font-medium text-sm hover:bg-card transition-all"
             >
