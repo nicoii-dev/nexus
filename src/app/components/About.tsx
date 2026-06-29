@@ -71,7 +71,7 @@ export default function About() {
               </div>
               <div className="glass rounded-xl p-4 text-center">
                 <div className="text-3xl font-bold text-gradient-alt mb-1">
-                  40+
+                  20+
                 </div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">
                   Projects Delivered
