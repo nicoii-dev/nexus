@@ -4,12 +4,10 @@ import Projects from "./Projects";
 
 export default function Main() {
   return (
-    <section className="text-[#CBDCEB] body-font md:max-w-6xl sm:w-2xl sm:max-w-2xl">
-      <section className="max-w-7xl mx-auto  mt-10 mb-10">
-        <About />
-        <Resume />
-        <Projects />
-      </section>
-    </section>
+    <div className="max-w-5xl mx-auto px-6 pb-32 space-y-24">
+      <About />
+      <Resume />
+      <Projects />
+    </div>
   );
 }

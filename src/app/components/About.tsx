@@ -1,220 +1,121 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Tooltip } from "rizzui";
-import "./about-css.css";
 import Icon from "@/lib/icon";
 
+const skills = [
+  { name: "React & React Native", icon: "react", href: "https://react.dev/" },
+  { name: "Next.js", icon: "next", href: "https://nextjs.org/" },
+  { name: "TypeScript", icon: "typescript", href: "https://www.typescriptlang.org/" },
+  { name: "GraphQL", icon: "graphql", href: "https://graphql.org/" },
+  { name: "Tailwind CSS", icon: "tailwind", href: "https://tailwindcss.com/" },
+  { name: "Laravel", icon: "laravel", href: "https://laravel.com/" },
+  { name: "Node.js", icon: "node", href: "https://nodejs.org/" },
+  { name: "Git", icon: "git", href: "https://git-scm.com/" },
+  { name: "GitHub", icon: "github", href: "https://github.com/" },
+  { name: "GitLab", icon: "gitlab", href: "https://about.gitlab.com/" },
+];
+
 export default function About() {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setVisible(true); } },
+      { threshold: 0.1 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="about"
-      className="flex px-5 mt-14 flex-col items-center bg-white shadow-2xl rounded-md p-10 pr-10 pl-10"
+      ref={ref}
+      className={`transition-all duration-700 ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
     >
-      <div className="flex flex-col">
-        <div className="flex flex-col justify-center sm:justify-between md:flex-row">
-          <div>
-            <p className="font-mono font-medium text-gray-800">{`</> ABOUT ME`}</p>
-            <p className="font-mono text-2xl text-center md:text-left sm:text-4xl md:text-5xl text-gray-800 mt-5">
-              Arjohn Ely
-            </p>
-            <p className="font-mono text-xl text-gray-800 text-center md:text-left">
+      <div className="glass rounded-2xl p-8 sm:p-12">
+        <p className="section-tag">{`</> ABOUT ME`}</p>
+
+        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
+          <div className="lg:col-span-3 space-y-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight">
+              <span className="text-gradient">Arjohn Ely</span>
+            </h2>
+            <p className="text-lg text-muted-foreground font-mono">
               Full Stack Developer
             </p>
+            <p className="text-muted-foreground/80 leading-relaxed">
+              My expertise includes utilizing React.js with the Next.js
+              framework for building robust and scalable web applications, along
+              with Tailwind CSS for creating responsive and visually appealing
+              designs. For mobile development, I specialize in React Native,
+              crafting seamless applications for both Android and iOS platforms.
+              Additionally, I possess intermediate proficiency in developing
+              RESTful APIs using PHP Laravel and NodeJS, enabling efficient
+              backend integration and data management.
+            </p>
           </div>
-          <div className="flex flex-col justify-center gap-2 items-center md:items-baseline mt-4">
-            <div className="flex gap-5">
-              <div className="outline-dashed outline-2 outline-offset-2 h-6 text-center flex items-center rounded-md border-gray-900 text-gray-600 p-4 font-mono">
-                {`Frontend(90%)`}
-              </div>
-              <div className="outline-dashed outline-2 outline-offset-2 h-6 text-center flex items-center rounded-md border-gray-900 text-gray-600 p-4 font-mono">
-                {`Backend(70%)`}
-              </div>
-            </div>
-            <div className="flex gap-5">
-              <div className="flex text-gray-800 justify-center font-mono">
-                <div className="">
-                  <p className="text-[50px]">4</p>
-                </div>
-                <div className="text-gray-800 content-center">
-                  <p>+</p>
-                  <p>YEARS OF EXPERIENCE</p>
+
+          <div className="lg:col-span-2 space-y-6">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="glass rounded-xl p-4 text-center">
+                <div className="text-3xl font-bold text-gradient mb-1">4+</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                  Years Experience
                 </div>
               </div>
-              <div className="flex text-gray-800 justify-center font-mono">
-                <div className="">
-                  <p className="text-[50px]">40</p>
+              <div className="glass rounded-xl p-4 text-center">
+                <div className="text-3xl font-bold text-gradient-alt mb-1">
+                  40+
                 </div>
-                <div className="text-gray-800 content-center">
-                  <p>+</p>
-                  <p>HOURS OF WORKING</p>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                  Projects Delivered
+                </div>
+              </div>
+              <div className="glass rounded-xl p-4 text-center">
+                <div className="text-3xl font-bold text-gradient mb-1">90%</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                  Frontend
+                </div>
+              </div>
+              <div className="glass rounded-xl p-4 text-center">
+                <div className="text-3xl font-bold text-gradient-alt mb-1">
+                  70%
+                </div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                  Backend
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <p className="text-md sm:text-md md:text-xl text-gray-800 font-mono tracking-widest text-center mt-14">
-          My expertise includes utilizing React.js with the Next.js framework
-          for building robust and scalable web applications, along with Tailwind
-          CSS for creating responsive and visually appealing designs. For mobile
-          development, I specialize in React Native, crafting seamless
-          applications for both Android and iOS platforms. Additionally, I
-          possess intermediate proficiency in developing RESTful APIs using PHP
-          Laravel and NodeJS, enabling efficient backend integration and data
-          management.
-        </p>
-      </div>
-      <div className="flex justify-center mt-10">
-        <div className="flex flex-wrap gap-5 justify-center">
-          <Tooltip
-            content={"React & React-Native"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://react.dev/"}
-              target="_blank"
-              className="rounded-md socialContainer containerOne"
-            >
-              {Icon("react")}
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"Next"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://nextjs.org/"}
-              target="_blank"
-              className="rounded-md socialContainer containerTwo"
-            >
-                 {Icon("next")}
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"TypeScript"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://www.typescriptlang.org/"}
-              target="_blank"
-              className="rounded-md socialContainer containerOne"
-            >
-              {Icon("typescript")}
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"GraphQL"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://graphql.org/"}
-              target="_blank"
-              className="rounded-md socialContainer containerTen"
-            >
-             {Icon("graphql")}
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"Tailwind"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://tailwindcss.com/"}
-              target="_blank"
-              className="rounded-md socialContainer containerThree"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                height="3em"
-                width="3em"
-                className="socialSvg"
+
+        <div className="mt-10 pt-10 border-t border-border">
+          <p className="text-xs text-muted-foreground tracking-[0.2em] uppercase mb-5">
+            Technologies
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {skills.map(({ name, icon, href }) => (
+              <Link
+                key={name}
+                href={href}
+                target="_blank"
+                className="group inline-flex items-center gap-2 px-4 py-2 rounded-xl glass hover:bg-primary/10 hover:border-primary/30 transition-all duration-300"
               >
-                <path d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6m-5 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z" />
-              </svg>
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"Laravel"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://laravel.com/"}
-              target="_blank"
-              className="rounded-md socialContainer containerFour"
-            >
-              {Icon("laravel")}
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"Node"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://nodejs.org/"}
-              target="_blank"
-              className="rounded-md socialContainer containerFive"
-            >
-              {Icon("node")}
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"Git"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://git-scm.com/"}
-              target="_blank"
-              className="rounded-md socialContainer containerSix"
-            >
-              {Icon("git")}
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"Github"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://github.com/"}
-              target="_blank"
-              className="rounded-md socialContainer containerSeven"
-            >
-              {Icon("github")}
-            </Link>
-          </Tooltip>
-          <Tooltip
-            content={"Gitlab"}
-            className="bg-white shadow-xl p-2 border"
-            placement="bottom-start"
-            showArrow={false}
-          >
-            <Link
-              href={"https://about.gitlab.com/"}
-              target="_blank"
-              className="rounded-md socialContainer containerEight"
-            >
-              {Icon("gitlab")}
-            </Link>
-          </Tooltip>
+                <span className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors">
+                  {Icon(icon)}
+                </span>
+                <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                  {name}
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
